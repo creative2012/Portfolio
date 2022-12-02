@@ -5,8 +5,9 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.5;
+  
 }
 
 h1,
@@ -20,4 +21,155 @@ h6 {
 
 p {
   margin: 0;
+}
+#wrapper{
+  
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+header{
+  
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  background-color:#2786d8;
+  height: 100px;
+  padding-right: 20px;
+
+  
+}
+#main-img{
+  position:absolute;
+  border-radius: 50px;
+  top:10px;
+  width: 80px;
+  height: 80px;
+  background-image: url("../images/m.jpg");
+  background-position: center;
+  background-size:cover;
+  background-repeat: none;
+  border-color: white;
+  border-width: 3px;
+  border-style: solid;
+  margin-left: 10px;
+  transition: all 0.4s ease-out;
+  cursor: pointer;
+}
+#main-img:hover{
+  top:10px;
+  width: 200px;
+  height: 200px;
+}
+header h1{
+  padding:15px 15px 5px 100px;
+  background-color:#14539b;
+  color:white;
+  border-radius: 0 15px 15px 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px;
+}
+nav{
+  min-width:fit-content;
+  white-space: nowrap; 
+}
+
+nav ul li{
+  display: inline;
+  font-weight: bold;
+  font-size: 25px;
+  
+}
+a{
+  color:white;
+  margin: 0 10px 0 10px;
+  text-decoration: none;
+  padding: 5px;
+  border-width:0;
+  border-color: white;
+  transition: all 0.4s ease-out;
+}
+a:hover,
+a:active {
+letter-spacing: 5px;
+border-top-width:1px;
+border-bottom-width:1px;
+border-style: solid;
+}
+.hero-banner{
+  height: 400px;
+  width: 100%;
+  background-image: url("../images/737402.jpg");
+  background-position: center;
+  background-size:cover;
+  background-repeat: none;
+  background-attachment: fixed;
+
+}
+.hero-banner{
+  display:flex;
+  align-items: flex-end;
+  justify-content: end;
+  padding-bottom:20px;
+  padding-right: 20px;
+}
+h2{
+  color:white;
+  font-size:18px;
+  font-weight: bold;
+  padding-right: 20px;
+  font-style: italic;
+}
+
+
+
+ /* Small devices */
+
+
+
+/* Medium devices */
+
+@media (max-width: 768px) {
+
+  #wrapper{
+    width:100%;
+  }
+  header{
+    flex-direction: column;
+    padding-right: 0;
+    height: fit-content;
+  }
+  #main-img{
+    position:absolute;
+    left: 20px;
+    top: 20px;
+  }
+  header h1{
+    text-align: center;
+    padding:15px 15px 5px 15px;
+    width: 100%;
+    border-radius: 0;
+  }
+
+}
+
+/* Large devices */
+
+@media (min-width: 992px) {
+
+  #wrapper{
+    width:992px;
+  }
+
+ }
+
+
+/* Extra large devices  */
+
+@media (min-width: 1200px) {
+
+  #wrapper{
+    width:1200px;
+  }
+
+
 }
