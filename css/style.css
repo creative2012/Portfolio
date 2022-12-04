@@ -364,7 +364,9 @@ nav ul li a:hover{
 /* Extra large devices  */
 
 @media (min-width: 1200px) {
-
+  .hero-banner{
+    height: calc(100vh - 100px);
+  }
 
 
 }
