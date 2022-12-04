@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  
 }
 
 body {
@@ -19,21 +20,27 @@ h6 {
   margin: 0;
 }
 h1,
-h2{
+h2,
+.work-item-title{
   color:white;
 }
-
+a{
+  text-decoration: none;
+}
 p {
   margin: 0;
 }
 /* flex areas */
 header, 
-.hero-banner{
+.hero-banner,
+#work-main,
+.work-item{
   display:flex;
 }
 /* grid areas */
 .page-wrapper,
-.page-section{
+.page-section,
+#work-grid-container{
   display: grid;
 }
 
@@ -110,13 +117,13 @@ nav ul li a:hover{
 .hero-banner h2{
   font-size:18px;
   font-weight: bold;
-  padding-right: 20px;
+  padding: 20px;
   font-style: italic;
+  background-color: #14539b7a;
 }
 
 /* main content */
 .page-wrapper{
-  grid-template-rows: fit-content fit-content fit-content;
   grid-template-areas:
   "about"
   "work"
@@ -138,7 +145,7 @@ nav ul li a:hover{
   border-bottom: 1px solid white;
 }
 .page-section{
-  grid-template-columns: minmax(155px, 257%) 75%;
+  grid-template-columns: minmax(140px, 257%) 75%;
   grid-template-areas:
   "header content";
 }
@@ -156,16 +163,106 @@ nav ul li a:hover{
   padding: 20px;
   
 }
+/* work showcase */
+#work-grid-container{
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 400px 250px 250px;
+  grid-template-areas:
+  "main main"
+  "showcase2 showcase3"
+  "showcase4 showcase5"
+  ;
+  transition: all 0.4s ease;
+}
+#work-main,
+.work-item{
+  border: 5px solid #14539b;
+  margin: 10px;
+  align-items: flex-end;
+  position:relative;
+  border-radius: 0.8rem;
+
+}
+#work-main:after,
+.work-item:after{
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: blue;
+  opacity: 0;
+  transition: 1s all;
+  }
+  
+  #work-main:hover:after,
+  .work-item:hover:after{
+  opacity: 0.2;
+  }
+
+#work-main{
+  padding-bottom: 20px;
+}
+.work-item{
+  padding-bottom: 10px;
+}
+#work-main:hover,
+.work-item:hover{
+  background-color: black;
+
+}
+#work-main{
+  grid-area: main;
+  background: url("../images/02-portfolio-1.jpg") no-repeat center;
+  background-size: cover;
+  
+}
+.showcase2{
+  grid-area: showcase2;
+  background: url("../images/02-portfolio-2.jpg") no-repeat center;
+  background-size: cover;
+}
+.showcase3{
+  grid-area: showcase3;
+  background: url("../images/02-portfolio-3.jpg") no-repeat center;
+  background-size: cover;
+}
+.showcase4{
+  grid-area: showcase4;
+  background: url("../images/02-portfolio-4.jpg") no-repeat center;
+  background-size: cover;
+}
+.showcase5{
+  grid-area: showcase5;
+  background: url("../images/02-run-buddy.jpg") no-repeat center;
+  background-size: cover;
+}
+.work-item-title{
+  position:relative;
+  padding:10px;
+  background-color:#14539b;
+  width: fit-content;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.2rem;
+  transition: all 0.4s ease;
+  z-index: 1;
+
+}
+.work-item-title span{
+  font-size:15px;
+  font-weight: lighter;
+}
 /* contact info */
 .contact-info{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-left: 50px;
   padding-right: 50px;
 }
 .contact-info a{
-  text-decoration: none;
   font-size: 20px;
   color: #14539b;
   transition: all 0.4s ease;
@@ -218,7 +315,6 @@ nav ul li a:hover{
     width: 100%;
     border-radius: 0;
   }
-  
 }
 
 /* Large devices */
@@ -232,6 +328,20 @@ nav ul li a:hover{
   .contact-info a{
     padding-top:10px;
     
+  }
+  .work-item-title{
+    line-height: 1rem;
+    font-size: 15px;
+    padding: 8px;
+
+  }
+  .work-item-title span{
+    font-size:12px;
+
+  }
+  #work-grid-container{
+    grid-template-rows: 250px 150px 150px;
+  
   }
 
 }
