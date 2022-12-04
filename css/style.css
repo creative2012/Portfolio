@@ -308,7 +308,7 @@ nav ul li a:hover{
     margin-left: -10px;
   }
   .hero-banner{
-    height: calc(100vh - 100px);
+    height: calc(100vh - 300px);
   }
 }
 /* Small devices */
