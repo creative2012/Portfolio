@@ -295,6 +295,19 @@ nav ul li a:hover{
 .email:before{
   font-size: 25px;
 }
+/* mobile */
+@media (max-width: 480px) {
+  .page-section{
+    grid-template-columns: minmax(100px, 257%) 75% !important;
+  }
+  .page-section h2{
+    font-size: 19px;
+    
+  }
+  #profile-img{
+    margin-left: -10px;
+  }
+}
 /* Small devices */
 
 @media (max-width: 576px) {
@@ -372,6 +385,7 @@ nav ul li a:hover{
   .hero-banner h2{
     font-size:25px;
   }
+  
 
 
 }
