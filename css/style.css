@@ -119,6 +119,7 @@ nav ul li a:hover{
   padding: 20px;
   font-style: italic;
   background-color: #14539b7a;
+  transition: all 0.4s ease;
 }
 
 /* main content */
@@ -367,6 +368,9 @@ nav ul li a:hover{
 @media (min-width: 1200px) {
   .hero-banner{
     height: calc(100vh - 100px);
+  }
+  .hero-banner h2{
+    font-size:25px;
   }
 
 
