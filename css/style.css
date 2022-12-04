@@ -18,53 +18,54 @@ h5,
 h6 {
   margin: 0;
 }
+h1,
+h2{
+  color:white;
+}
 
 p {
   margin: 0;
 }
-#wrapper{
-  
-  margin-left: auto;
-  margin-right: auto;
-  
-}
-header{
-  
+/* flex areas */
+header, 
+.hero-banner{
   display:flex;
+}
+/* grid areas */
+.page-wrapper,
+.page-section{
+  display: grid;
+}
+
+/* header / profile img / nav */
+
+header{
   align-items:center;
   justify-content: space-between;
   background-color:#2786d8;
   height: 100px;
-  padding-right: 20px;
-
-  
+  padding-right: 20px; 
 }
-#main-img{
+#profile-img{
   position:absolute;
   border-radius: 50px;
   top:10px;
   width: 80px;
   height: 80px;
-  background-image: url("../images/m.jpg");
-  background-position: center;
+  background: url("../images/m.jpg") center;
   background-size:cover;
-  background-repeat: none;
-  border-color: white;
-  border-width: 3px;
-  border-style: solid;
+  border: 3px solid white;
   margin-left: 10px;
-  transition: all 0.4s ease-out;
+  transition: all 0.4s ease;
   cursor: pointer;
 }
-#main-img:hover{
-  top:10px;
+#profile-img:hover{
   width: 200px;
   height: 200px;
 }
 header h1{
   padding:15px 15px 5px 100px;
   background-color:#14539b;
-  color:white;
   border-radius: 0 15px 15px 0;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px;
 }
@@ -79,66 +80,134 @@ nav ul li{
   font-size: 25px;
   
 }
-a{
+nav ul li a{
   color:white;
   margin: 0 10px 0 10px;
   text-decoration: none;
   padding: 5px;
-  border-width:0;
-  border-color: white;
-  transition: all 0.4s ease-out;
+  border:0 white;
+  transition: all 0.4s ease;
 }
-a:hover,
-a:active {
-letter-spacing: 5px;
-border-top-width:1px;
-border-bottom-width:1px;
-border-style: solid;
+nav ul li a:hover{
+  letter-spacing: 5px;
+  border-top-width:1px;
+  border-bottom-width:1px;
+  border-style: solid;
 }
-.hero-banner{
-  height: 400px;
-  width: 100%;
-  background-image: url("../images/737402.jpg");
-  background-position: center;
-  background-size:cover;
-  background-repeat: none;
-  background-attachment: fixed;
 
-}
+/* hero banner */
+
 .hero-banner{
-  display:flex;
   align-items: flex-end;
   justify-content: end;
+  height: 400px;
+  width: 100%;
+  background: url("../images/737402.jpg") no-repeat fixed center;
+  background-size: cover;
   padding-bottom:20px;
   padding-right: 20px;
 }
-h2{
-  color:white;
+.hero-banner h2{
   font-size:18px;
   font-weight: bold;
   padding-right: 20px;
   font-style: italic;
 }
 
+/* main content */
+.page-wrapper{
+  grid-template-rows: fit-content fit-content fit-content;
+  grid-template-areas:
+  "about"
+  "work"
+  "contact";
+}
+#about{
+  grid-area: about;
+}
+#work{
+  grid-area: work;
+}
+#contact{
+  grid-area: contact;
+}
+#about,
+#work,
+#contact{
+  text-align: right;
+  border-bottom: 1px solid white;
+}
+.page-section{
+  grid-template-columns: minmax(155px, 257%) 75%;
+  grid-template-areas:
+  "header content";
+}
+.page-section h2{
+  grid-area: header;
+  background-color:#2786d8;
+  
+}
+.section-content{
+  grid-area: content;
+  text-align: left;
+}
+.page-section h2, 
+.section-content{
+  padding: 20px;
+  
+}
+/* contact info */
+.contact-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.contact-info a{
+  text-decoration: none;
+  font-size: 20px;
+  color: #14539b;
+  transition: all 0.4s ease;
+  
+}
+.contact-info a:hover{
+  color: #207be2;
+  transform: scale(1.1);
+}
+.phone:before{
+  content: 	'\260F';
+}
+.email:before{
+  content: '\2709';
+}
+.phone:before,
+.email:before{
+  font-size: 25px;
+}
+/* Small devices */
 
-
- /* Small devices */
-
-
+@media (max-width: 576px) {
+  nav{
+    margin-right: -40px;
+    position: unset;
+  }
+  nav ul li{
+    font-size: 20px;
+  }
+}
 
 /* Medium devices */
 
 @media (max-width: 768px) {
 
-  #wrapper{
-    width:100%;
-  }
+
   header{
     flex-direction: column;
     padding-right: 0;
     height: fit-content;
   }
-  #main-img{
+  #profile-img{
     position:absolute;
     left: 20px;
     top: 20px;
@@ -149,27 +218,29 @@ h2{
     width: 100%;
     border-radius: 0;
   }
-
+  
 }
 
 /* Large devices */
 
-@media (min-width: 992px) {
+  @media (max-width: 950px) {
 
-  #wrapper{
-    width:992px;
+  .contact-info{
+    flex-direction: column;
+    padding: 0;
+  }
+  .contact-info a{
+    padding-top:10px;
+    
   }
 
- }
+}
 
 
 /* Extra large devices  */
 
 @media (min-width: 1200px) {
 
-  #wrapper{
-    width:1200px;
-  }
 
 
 }
