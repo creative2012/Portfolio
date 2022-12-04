@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  
 }
 
 body {
@@ -8,7 +7,6 @@ body {
   padding: 0;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.5;
-  
 }
 
 h1,
@@ -174,6 +172,23 @@ nav ul li a:hover{
   ;
   transition: all 0.4s ease;
 }
+.work-item-title{
+  position:relative;
+  padding:10px;
+  background-color:#14539b;
+  width: fit-content;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.2rem;
+  transition: all 1s ease;
+  border-radius: 0 0.8rem 0.8rem 0;
+  z-index: 1;
+
+}
+.work-item-title span{
+  font-size:15px;
+  font-weight: lighter;
+}
 #work-main,
 .work-item{
   border: 5px solid #14539b;
@@ -181,6 +196,7 @@ nav ul li a:hover{
   align-items: flex-end;
   position:relative;
   border-radius: 0.8rem;
+  transition: 1s all;
 
 }
 #work-main:after,
@@ -200,6 +216,17 @@ nav ul li a:hover{
   .work-item:hover:after{
   opacity: 0.2;
   }
+  #work-main:hover > .work-item-title,
+  .work-item:hover > .work-item-title{
+    background-color: #2786d8;
+  }
+  #work-main:hover ,
+  .work-item:hover {
+    border-color: #2786d8;
+  }
+
+
+  
 
 #work-main{
   padding-bottom: 20px;
@@ -237,22 +264,6 @@ nav ul li a:hover{
   grid-area: showcase5;
   background: url("../images/02-run-buddy.jpg") no-repeat center;
   background-size: cover;
-}
-.work-item-title{
-  position:relative;
-  padding:10px;
-  background-color:#14539b;
-  width: fit-content;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 1.2rem;
-  transition: all 0.4s ease;
-  z-index: 1;
-
-}
-.work-item-title span{
-  font-size:15px;
-  font-weight: lighter;
 }
 /* contact info */
 .contact-info{
@@ -292,7 +303,9 @@ nav ul li a:hover{
   nav ul li{
     font-size: 20px;
   }
+  
 }
+
 
 /* Medium devices */
 
@@ -315,6 +328,20 @@ nav ul li a:hover{
     width: 100%;
     border-radius: 0;
   }
+  #work-grid-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 250px 250px 250px 250px !important;
+    grid-template-areas:
+    "main"
+    "showcase2"
+    "showcase3"
+    "showcase4"
+    "showcase5"
+    ;
+  }
+  .work-item{
+    padding-bottom: 20px;
+  }
 }
 
 /* Large devices */
@@ -329,20 +356,7 @@ nav ul li a:hover{
     padding-top:10px;
     
   }
-  .work-item-title{
-    line-height: 1rem;
-    font-size: 15px;
-    padding: 8px;
 
-  }
-  .work-item-title span{
-    font-size:12px;
-
-  }
-  #work-grid-container{
-    grid-template-rows: 250px 150px 150px;
-  
-  }
 
 }
 
