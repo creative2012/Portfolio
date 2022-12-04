@@ -307,6 +307,9 @@ nav ul li a:hover{
   #profile-img{
     margin-left: -10px;
   }
+  .hero-banner{
+    height: calc(100vh - 100px);
+  }
 }
 /* Small devices */
 
