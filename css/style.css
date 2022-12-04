@@ -212,23 +212,20 @@ nav ul li a:hover{
   background: blue;
   opacity: 0;
   transition: 1s all;
-  }
+}
   
-  #work-main:hover:after,
-  .work-item:hover:after{
+#work-main:hover:after,
+.work-item:hover:after{
   opacity: 0.2;
-  }
-  #work-main:hover > .work-item-title,
-  .work-item:hover > .work-item-title{
-    background-color: #2786d8;
-  }
-  #work-main:hover ,
-  .work-item:hover {
-    border-color: #2786d8;
-  }
-
-
-  
+}
+#work-main:hover > .work-item-title,
+.work-item:hover > .work-item-title{
+  background-color: #2786d8;
+}
+#work-main:hover ,
+.work-item:hover {
+  border-color: #2786d8;
+}
 
 #work-main{
   padding-bottom: 20px;
