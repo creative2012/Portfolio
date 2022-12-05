@@ -16,6 +16,7 @@ it was also important that links scrolls the UI to the corresponding section and
 ## Usage
 
 The following image shows the web application's appearance and functionality:
+Link to live site: https://creative2012.github.io/Portfolio/
 
 ![My Portfolio webpage includes a navigation bar, a header image, an about me section, examples of my work and a contact section. Each link will take you directly to the corresponding section.](images/screenshot.png)
 
