@@ -5,7 +5,7 @@
 
 This is my first attempt at a portfolio website as part of my skills for life course.
 I was tasked with presenting a recent photo, links to sections about me, my work (albeit they are place holder examples from the course and not my actual work items... yet!) and how to contact me.
-it was also important that links scrolls the UI to the corresponding section and the first application in the work section was larger that the others by utilising grids. The is also responsive and adapts the the viewport via media querys.
+it was also important that links scrolls the UI to the corresponding section and the first application in the work section was larger that the others by utilising grids. The site is also responsive and adapts the the viewport via media querys.
 
 ## Table of Contents 
 
